@@ -1,7 +1,20 @@
 import React from "react";
-
+import { Container } from "react-bootstrap";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import { Outlet } from "react-router-dom";
 const App = () => {
-  return <h1>Welcome to Pratik's Shop</h1>;
+  return (
+    <>
+      <Header />
+      <main className="py-3">
+        <Container>
+          <Outlet />
+        </Container>
+      </main>
+      <Footer />
+    </>
+  );
 };
 
 export default App;
